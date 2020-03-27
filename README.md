@@ -49,5 +49,8 @@ adocファイルはMarkdownに似た記法で書かれたもので、API仕様�
     include::{snippets}/testAddBoards/http-response.adoc[]
     ```
 
-## 出力結果例
-sample.html [リンク](sample.html)
+## 出力先
+　./target/generated-docs/index.html
+
+## 出力例
+  ./sample.html
