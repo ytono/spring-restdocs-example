@@ -1,32 +1,36 @@
 # spring-restdocs-example
 
 
-# Spring REST docs ƒTƒ“ƒvƒ‹
-Spring REST docs‚Íƒ†ƒjƒbƒgƒeƒXƒg‚ÌƒŠƒNƒGƒXƒgEƒŒƒXƒ|ƒ“ƒX“à—e‚ğasciidoc‚Æ˜AŒg‚µAAPId—l‘‚Æ‚µ‚Äo—Í‚·‚éˆ×‚Ìƒ‰ƒCƒuƒ‰ƒŠ‚Å‚·B 
+# Spring REST docs ã‚µãƒ³ãƒ—ãƒ«
+Spring REST docsã¯ãƒ¦ãƒ‹ãƒƒãƒˆãƒ†ã‚¹ãƒˆã®ãƒªã‚¯ã‚¨ã‚¹ãƒˆãƒ»ãƒ¬ã‚¹ãƒãƒ³ã‚¹å†…å®¹ã‚’asciidocã¨é€£æºã—ã€APIä»•æ§˜æ›¸ã¨ã—ã¦å‡ºåŠ›ã™ã‚‹ç‚ºã®ãƒ©ã‚¤ãƒ–ãƒ©ãƒªã§ã™ã€‚ 
 
-# ƒ\[ƒXà–¾
+# ã‚½ãƒ¼ã‚¹èª¬æ˜
 
-## ƒeƒXƒgƒR[ƒh src/test/java/sample/restdocs/SpringRestdocsApplicationTests.java [ƒR[ƒh](src/test/java/sample/restdocs/SpringRestdocsApplicationTests.java)
+* ãƒ†ã‚¹ãƒˆã‚³ãƒ¼ãƒ‰ src/test/java/sample/restdocs/SpringRestdocsApplicationTests.java [ã‚³ãƒ¼ãƒ‰](src/test/java/sample/restdocs/SpringRestdocsApplicationTests.java)
 
-1.ƒNƒ‰ƒXƒAƒmƒe[ƒVƒ‡ƒ“‚ÉˆÈ‰º‚ğ’Ç‰ÁB
-target/generated-snippets‚Í.adocƒtƒ@ƒCƒ‹‚Ìo—Íæ. 
+1. ã‚¯ãƒ©ã‚¹ã‚¢ãƒãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã«ä»¥ä¸‹ã‚’è¿½åŠ ã€‚
+target/generated-snippetsã¯.adocãƒ•ã‚¡ã‚¤ãƒ«ã®å‡ºåŠ›å…ˆ. 
 
   * @ExtendWith({ RestDocumentationExtension.class, SpringExtension.class }) 
   * @AutoConfigureRestDocs(outputDir = "target/generated-snippets") 
 
-2.WebApplicationContext‚ÉˆÈ‰º‚ÌConfiguration‚ğ“K—p(apply)‚·‚é 
+2. WebApplicationContextã«ä»¥ä¸‹ã®Configurationã‚’é©ç”¨(apply)ã™ã‚‹ 
 
   * documentationConfiguration(restDocumentation) 
 
-3.ŠeƒeƒXƒg“à‚Ìˆ—’†‚ÉƒŠƒNƒGƒXƒg‚ÌƒRƒ}ƒ“ƒh‚âAƒŠƒNƒGƒXƒg‚¨‚æ‚ÑƒŒƒXƒ|ƒ“ƒX‚Ìƒ{ƒfƒB•”‚ÌandDo‚ğg‚Á‚Ä“à—e‚ğo—Í‚·‚éB  mockMvc.perform(post("/boards").content(boardsJson).contentType("application/json"))
-  .andDo(print())  // ƒŠƒNƒGƒXƒg‚ÌcurlƒRƒ}ƒ“ƒh‚Ì“à—e‚ğo—Í
-  .andExpect(status().isOk()).andExpect(MockMvcResultMatchers.content().json(boardsJson))
-  .andDo(document("{methodName}",    // ƒƒ\ƒbƒh–¼‚Ìo—Í‚Æ‚È‚é 
-      preprocessRequest(prettyPrint()), @// ƒŠƒNƒGƒXƒg
-      preprocessResponse(prettyPrint())));} // ƒŒƒXƒ|ƒ“ƒX
+3. å„ãƒ†ã‚¹ãƒˆå†…ã®å‡¦ç†ä¸­ã«ãƒªã‚¯ã‚¨ã‚¹ãƒˆæ™‚ã®ã‚³ãƒãƒ³ãƒ‰ã‚„ã€ãƒªã‚¯ã‚¨ã‚¹ãƒˆãŠã‚ˆã³ãƒ¬ã‚¹ãƒãƒ³ã‚¹ã®ãƒœãƒ‡ã‚£éƒ¨ã®andDoã‚’ä½¿ã£ã¦å†…å®¹ã‚’å‡ºåŠ›ã™ã‚‹ã€‚  
 
-## d—l‘ƒeƒ“ƒvƒŒ[ƒg src/main/asciidoc/index.adoc (ƒR[ƒh)[src/main/asciidoc/index.adoc]
-1.src/main/asciidoc/index.adoc ƒtƒ@ƒCƒ‹‚ğ—pˆÓ‚µAƒhƒLƒ…ƒƒ“ƒg‚Æƒ}[ƒW‚·‚éBadocƒtƒ@ƒCƒ‹‚ÍMarkdown‚É—‚½‹L–@‚ğg‚Á‚Ä‘‚­B 
-index.adoc‚É‚ÍAPId—l‚ÌƒKƒCƒhƒ‰ƒCƒ““™‚ğ‹LÚ‚µAo—Í—á‚Æ‚µ‚ÄAƒeƒXƒgƒP[ƒX‚Ì³íŒn‚âˆÙíŒn‚ÌƒŒƒXƒ|ƒ“ƒXŒ‹‰Ê‚Ì—á‚ğŠÜ‚ß‚ÄƒhƒLƒ…ƒƒ“ƒg‚ğo—Í‚·‚éB 
+  ```
+  mockMvc.perform(post("/boards").content(boardsJson).contentType("application/json"))
+  .andDo(print())  // ãƒªã‚¯ã‚¨ã‚¹ãƒˆæ™‚ã®curlã‚³ãƒãƒ³ãƒ‰ã®å†…å®¹ã‚’å‡ºåŠ›
+  .andExpect(status().isOk()).andExpect(MockMvcResultMatchers.content().json(boardsJson))
+  .andDo(document("{methodName}",    // ãƒ¡ã‚½ãƒƒãƒ‰åã®å‡ºåŠ›ã¨ãªã‚‹ 
+      preprocessRequest(prettyPrint()), ã€€// ãƒªã‚¯ã‚¨ã‚¹ãƒˆ
+      preprocessResponse(prettyPrint())));} // ãƒ¬ã‚¹ãƒãƒ³ã‚¹
+  ```
+
+* ä»•æ§˜æ›¸ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ src/main/asciidoc/index.adoc [ã‚³ãƒ¼ãƒ‰](src/main/asciidoc/index.adoc)
+1.src/main/asciidoc/index.adoc ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç”¨æ„ã—ã€ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã¨ãƒãƒ¼ã‚¸ã™ã‚‹ã€‚adocãƒ•ã‚¡ã‚¤ãƒ«ã¯Markdownã«ä¼¼ãŸè¨˜æ³•ã‚’ä½¿ã£ã¦æ›¸ãã€‚ 
+index.adocã«ã¯APIä»•æ§˜ã®ã‚¬ã‚¤ãƒ‰ãƒ©ã‚¤ãƒ³ç­‰ã‚’è¨˜è¼‰ã—ã€å‡ºåŠ›ä¾‹ã¨ã—ã¦ã€ãƒ†ã‚¹ãƒˆã‚±ãƒ¼ã‚¹ã®æ­£å¸¸ç³»ã‚„ç•°å¸¸ç³»ã®ãƒ¬ã‚¹ãƒãƒ³ã‚¹çµæœã®ä¾‹ã‚’å«ã‚ã¦ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã‚’å‡ºåŠ›ã™ã‚‹ã€‚ 
 
 
