@@ -33,8 +33,21 @@ src/test/java/sample/restdocs/SpringRestdocsApplicationTests.java [コード](sr
         preprocessResponse(prettyPrint())));} // レスポンス
     ```
 
-* 仕様書テンプレート src/main/asciidoc/index.adoc [コード](src/main/asciidoc/index.adoc)
-1.src/main/asciidoc/index.adoc ファイルを用意し、ドキュメントとマージする。adocファイルはMarkdownに似た記法を使って書く。   
-index.adocにはAPI仕様のガイドライン等を記載し、出力例として、テストケースの正常系や異常系のレスポンス結果の例を含めてドキュメントを出力する。 
+## 仕様書テンプレート
+src/main/asciidoc/index.adoc [コード](src/main/asciidoc/index.adoc)
 
+1. src/main/asciidoc/index.adocドキュメントとマージする。  
+adocファイルはMarkdownに似た記法で書かれたもので、API仕様のガイドライン等を記載し、上記スニペットに出力されたテストケースの正常系や異常系のレスポンス結果の例をリンクすることにより、ドキュメントの連携ができる。 
 
+    ```
+    == POST API Example
+
+    .request
+    include::{snippets}/testAddBoards/http-request.adoc[]
+
+    .response
+    include::{snippets}/testAddBoards/http-response.adoc[]
+    ```
+
+## 出力結果例
+sample.html [リンク](sample.html)
